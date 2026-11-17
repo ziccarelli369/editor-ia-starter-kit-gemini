@@ -1,2 +1,2 @@
-Generated from editor-ia-starter-kit@b6094bb by gemini/build.mjs.
+Generated from editor-ia-starter-kit@71903c2 by gemini/build.mjs.
 Edit the source kit and rebuild. Hand edits here are overwritten.
