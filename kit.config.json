@@ -1,0 +1,50 @@
+{
+  "$comment": "editor-ia-starter-kit settings. The agent reads this file at the start of every task. Keys never go here; they go in .env.",
+  "language": "es",
+  "models": {
+    "profile": "solo",
+    "$profiles": {
+      "solo": "One agent on the pro model does everything: taste, design, cuts, render.",
+      "team": "The pro model orchestrates and makes every design decision. Flash-tier subagents run mechanical, parallel work: transcripts, probes, validators, contact sheets."
+    },
+    "design": "pro",
+    "worker": "flash",
+    "engineer": "pro",
+    "$engineer": "character-film only: writes and fixes engine code and measurement, never taste."
+  },
+  "transcription": {
+    "provider": "whisper",
+    "languages": [
+      "es"
+    ],
+    "$languages": "Languages spoken in your footage: [\"es\"], [\"en\"] or [\"en\",\"es\"]. One language picks a fixed Whisper model; both lets Whisper detect per file.",
+    "model": "medium",
+    "model_en": "medium.en",
+    "$providers": {
+      "whisper": "npm run transcribe -- <video>  (local, free; the fallback when no key is set)",
+      "elevenlabs": "npm run transcribe -- <video>  (used when provider is elevenlabs and ELEVENLABS_API_KEY is set in .env; Scribe word times are measured)"
+    }
+  },
+  "defaults": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "brand": "_template",
+    "goal": "",
+    "$goal": "personal | sell | grow. Empty means the agent asks per project."
+  },
+  "outbox": {
+    "required": [
+      "video",
+      "cover"
+    ],
+    "extras": [
+      "caption",
+      "srt"
+    ]
+  },
+  "music": {
+    "folder": "music",
+    "$comment": "Drop royalty-free tracks you own the rights to in music/ (or brands/<slug>/music/ for one brand). The agent picks from there when no music key is set."
+  }
+}

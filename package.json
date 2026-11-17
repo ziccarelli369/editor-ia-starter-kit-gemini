@@ -1,0 +1,40 @@
+{
+  "name": "editor-ia-starter-kit-gemini",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Starter kit for short-form AI video editing with Antigravity and HyperFrames: inbox in, finals out.",
+  "scripts": {
+    "new-video": "node scripts/new-video.mjs",
+    "inbox": "node scripts/inbox.mjs",
+    "deliver": "node scripts/deliver.mjs",
+    "clean-staging": "node scripts/clean-staging.mjs",
+    "projects": "node scripts/projects-index.mjs",
+    "hearing": "node scripts/hearing-check.mjs",
+    "align": "node scripts/align-captions.mjs",
+    "avsync": "node scripts/av-sync-check.mjs",
+    "track-crop": "node scripts/track-crop.mjs",
+    "transcribe": "node scripts/transcribe.mjs",
+    "transcribe:elevenlabs": "node scripts/transcribe-elevenlabs.mjs",
+    "whisper-to-kit": "node scripts/whisper-to-kit.mjs",
+    "validate-beats": "node scripts/validate-beat-sync.mjs",
+    "preflight": "node scripts/preflight.mjs",
+    "setup": "node scripts/setup.mjs",
+    "film:install": "node scripts/film-install.mjs",
+    "unlock": "node scripts/unlock.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check-kit.mjs",
+    "catalog": "node scripts/style-library/build-registry.mjs",
+    "check:media": "node scripts/check-media.mjs",
+    "validate:short-form": "node .agents/skills/short-form-edit/scripts/validate-plan.mjs",
+    "validate:footage": "node .agents/skills/short-form-edit/scripts/validate-footage.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "hyperframes": "0.7.109",
+    "gsap": "3.14.2",
+    "puppeteer-core": "25.7.0"
+  }
+}
